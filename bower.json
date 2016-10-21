@@ -1,0 +1,30 @@
+{
+    "name": "dashboard",
+    "description": "Data-analysis",
+    "main": "",
+    "authors": [
+        "Luiz Henrique Soares <luizhenriquesoares91@gmail.com>"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/luizhenriquesoares/Visualiza-o-de-dados",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "resources/assets/bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular": "^1.5.8",
+        "angular-animate": "^1.5.8",
+        "angular-resource": "^1.5.8",
+        "angular-ui-router": "^0.3.1",
+        "angular-cookies": "^1.5.8",
+        "angular-messages": "^1.5.8",
+        "angular-bootstrap": "^2.1.3",
+        "bootstrap-sass": "^3.3.7",
+        "angular-route": "^1.5.8",
+        "font-awesome": "^4.6.3"
+    }
+}

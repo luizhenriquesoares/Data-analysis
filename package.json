@@ -11,10 +11,14 @@
     "debug": "~2.2.0",
     "dotenv": "^2.0.0",
     "express": "~4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.3.2",
     "jade": "~1.11.0",
     "mongoose": "^4.6.4",
     "mongoose-currency": "^0.2.0",
     "morgan": "~1.7.0",
+    "rimraf": "^2.5.4",
     "serve-favicon": "~2.3.0"
   }
 }
