@@ -5,20 +5,18 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const errorHandler = require('errorhandler');
+const chalk = require('chalk');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const api = {};
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
  */
 dotenv.load({ path: '.env' });
-
-/**
- * Routes (route handlers).
- */
-const routes = require('./routes/index');
 
 /**
  * Create Express server.
@@ -28,13 +26,20 @@ const app = express();
 /**
  * Connect to MongoDB.
  */
+mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI || process.env.MONGOLAB_URI);
+mongoose.connection.on('connected', () => {
+  console.log('%s MongoDB connection established!', chalk.green('✓'));
+});
 mongoose.connection.on('error', () => {
-  console.error('MongoDB Connection Error. Please make sure that MongoDB is running.');
-  process.exit(1);
+  console.log('%s MongoDB connection error. Please make sure MongoDB is running.', chalk.red('✗'));
+  process.exit();
 });
 
-// view engine setup
+/**
+ * Express configuration.
+ */
+app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -48,40 +53,32 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 /**
- * Primary app routes.
+ * Routes (route define).
  */
-app.use('/', routes);
+const index = require('./routes/index');
 
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
+/**
+* Primary app routes.
+*/
+app.use('/', index);
 
-// error handlers
+/**
+ * JSON API
+ */
+api.olinda = require('./routes/api/api');
+app.use('/api/olinda',  api.olinda);
 
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
+/**
+ * Error Handler.
+ */
+app.use(errorHandler());
 
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
+/**
+ * Start Express server.
+ */
+app.listen(app.get('port'), () => {
+  console.log('%s Express server listening on port %d in %s mode.', chalk.green('✓'), app.get('port'), app.get('env'));
 });
 
 
