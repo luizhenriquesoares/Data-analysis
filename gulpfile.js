@@ -32,7 +32,8 @@ config.vendor_path_js = [
     config.bower_path + '/angular-bootstrap/ui-bootstrap.min.js',
     config.bower_path + '/angular-strap/dist/modules/navbar.min.js',
     config.bower_path + '/angular-cookies/angular-cookies.min.js',
-    config.bower_path + '/query-string/query-string.js'
+    config.bower_path + '/query-string/query-string.js',
+    config.bower_path + '/materialize/dist/js/materialize.min.js'
 ];
 
 // public/build/css
@@ -125,6 +126,10 @@ gulp.task('copy-scripts', function () {
     gulp.src(config.vendor_path_js)
         .pipe(gulp.dest(config.build_vendor_path_js))
         .pipe(liveReload());
+
+        gulp.src(config.assets_path + '/js/**/*.js')
+            .pipe(gulp.dest(config.build_vendor_path_js))
+            .pipe(liveReload());
 });
 
 /* Task 6 Compilar Sass*/

@@ -1,7 +1,10 @@
 doctype html
-html
+html(lang="pt-br")
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/build/css/app.css')
   body
+    h1 teste
+    nav(class="nav-wrapper")
+      a(href="#", class="brand-logo") Inicio
     block content
