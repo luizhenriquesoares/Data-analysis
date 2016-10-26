@@ -33,7 +33,8 @@ config.vendor_path_js = [
     config.bower_path + '/angular-strap/dist/modules/navbar.min.js',
     config.bower_path + '/angular-cookies/angular-cookies.min.js',
     config.bower_path + '/query-string/query-string.js',
-    config.bower_path + '/materialize/dist/js/materialize.min.js'
+    config.bower_path + '/chart.js/dist/Chart.min.js',
+    config.bower_path + '/angular-chart.js/dist/angular-chart.min.js',
 ];
 
 // public/build/css
@@ -71,6 +72,12 @@ gulp.task('copy-font', function () {
     ])
         .pipe(gulp.dest(config.build_path_font))
         .pipe(liveReload());
+
+        gulp.src([
+            config.assets_path + '/fonts/**/*'
+        ])
+            .pipe(gulp.dest(config.build_path_font))
+            .pipe(liveReload());
 });
 
 /*Task 2 - Copiar Arquivos images - Modo desenvolvimento */

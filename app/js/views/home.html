@@ -1,5 +1,31 @@
-<ul ng-repeat="item in data">
-
-  <li>{{item.NOME_MUNICIPIO}}</li>
-
-</ul>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Eleições 2016</h4>
+                        <p class="category">Olinda 1 turno - Prefeito</p>
+                    </div>
+                    <div class="content">
+                        <canvas id="pie" class="chart chart-pie" chart-data="data"
+                         chart-labels="labels" chart-options="options"
+                          chart-colors="colors" height="100" width="100">
+                        </canvas>
+                        <div class="footer">
+                            <div class="legend">
+                                <i class="fa fa-circle text-info"></i> Professor Lupércio
+                                <i class="fa fa-circle text-danger"></i> Antônio Campos
+                                <i class="fa fa-circle text-warning"></i> Luciana
+                            </div>
+                            <hr>
+                            <div class="stats">
+                                <i class="fa fa-clock-o"></i> Resultado 25/10/2016, Total de Votos:
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

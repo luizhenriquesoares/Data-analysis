@@ -1,6 +1,6 @@
 'use stricts';
 
-angular.module('app.controllers', []);
+angular.module('app.controllers', ['chart.js']);
 angular.module('app.services', []);
 angular.module('app.filters', []);
 
@@ -13,7 +13,7 @@ angular.module('app', ['app.controllers', 'app.services', 'app.filters', 'ui.rou
 .config(['$stateProvider', function($stateProvider) {
     $stateProvider
         .state('index', {
-            url: '/index',
+            url: '/',
             templateUrl: 'build/views/home.html',
             controller: 'indexCtrl'
         });
