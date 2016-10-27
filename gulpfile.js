@@ -32,9 +32,13 @@ config.vendor_path_js = [
     config.bower_path + '/angular-bootstrap/ui-bootstrap.min.js',
     config.bower_path + '/angular-strap/dist/modules/navbar.min.js',
     config.bower_path + '/angular-cookies/angular-cookies.min.js',
+    config.bower_path + '/angular-chart.js/dist/angular-chart.min.js',
     config.bower_path + '/query-string/query-string.js',
     config.bower_path + '/chart.js/dist/Chart.min.js',
-    config.bower_path + '/angular-chart.js/dist/angular-chart.min.js',
+    config.bower_path + '/d3/d3.js',
+    config.bower_path + '/nvd3/build/nv.d3.js',
+    config.bower_path + '/angular-nvd3/dist/angular-nvd3.js',
+    config.bower_path + '/angular-charts/dist/angular-charts.js'
 ];
 
 // public/build/css

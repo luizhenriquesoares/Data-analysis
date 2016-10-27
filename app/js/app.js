@@ -1,6 +1,6 @@
 'use stricts';
 
-angular.module('app.controllers', ['chart.js']);
+angular.module('app.controllers', ['chart.js', 'nvd3', 'angularCharts']);
 angular.module('app.services', []);
 angular.module('app.filters', []);
 
@@ -15,6 +15,6 @@ angular.module('app', ['app.controllers', 'app.services', 'app.filters', 'ui.rou
         .state('index', {
             url: '/',
             templateUrl: 'build/views/home.html',
-            controller: 'indexCtrl'
+            controller: 'pierCtrl'
         });
 }]);

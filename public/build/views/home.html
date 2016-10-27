@@ -1,23 +1,15 @@
 <div class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <div class="card">
                     <div class="header">
-                        <h4 class="title">Eleições 2016</h4>
+                        <h4 class="title">Eleições 2016 - Total de votos</h4>
                         <p class="category">Olinda 1 turno - Prefeito</p>
                     </div>
                     <div class="content">
-                        <canvas id="pie" class="chart chart-pie" chart-data="data"
-                         chart-labels="labels" chart-options="options"
-                          chart-colors="colors" height="100" width="100">
-                        </canvas>
+                        <nvd3 options="options" data="data"></nvd3>
                         <div class="footer">
-                            <div class="legend">
-                                <i class="fa fa-circle text-info"></i> Professor Lupércio
-                                <i class="fa fa-circle text-danger"></i> Antônio Campos
-                                <i class="fa fa-circle text-warning"></i> Luciana
-                            </div>
                             <hr>
                             <div class="stats">
                                 <i class="fa fa-clock-o"></i> Resultado 25/10/2016, Total de Votos:
@@ -26,6 +18,74 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-7">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Total de votos - Zonas Eleitorais</h4>
+                        <p class="category">Municipio de Olinda</p>
+                    </div>
+                    <div class="content">
+                        <div data-ac-chart="'bar'" data-ac-data="dataBar" data-ac-config="config" class="chart">
+                        </div>
+                        <div class="footer">
+                            <div class="legend">
+                                <!-- <i class="fa fa-circle text-info"></i> Open
+                                     <i class="fa fa-circle text-danger"></i> Click
+                                     <i class="fa fa-circle text-warning"></i> Click Second Time -->
+                            </div>
+                            <hr>
+                            <div class="stats">
+                                <i class="fa fa-history"></i> Updated 3 minutes ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+<!-- Segunda Linha -->
+
+<!-- <div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Eleições 2016 - Total de votos</h4>
+                        <p class="category">Olinda 1 turno - Prefeito</p>
+                    </div>
+                    <div class="content">
+                        <nvd3 options="options" data="data"></nvd3>
+                        <div class="footer">
+                            <hr>
+                            <div class="stats">
+                                <i class="fa fa-clock-o"></i> Resultado 25/10/2016, Total de Votos:
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Total de votos - Zonas Eleitorais</h4>
+                        <p class="category">Municipio de Olinda</p>
+                    </div>
+                    <div class="content">
+                         <nvd3 options="options" data="data"></nvd3>
+                        <div class="footer">
+                            <hr>
+                            <div class="stats">
+                                <i class="fa fa-history"></i> Updated 3 minutes ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
