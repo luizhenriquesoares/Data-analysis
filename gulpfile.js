@@ -40,7 +40,8 @@ config.vendor_path_js = [
     config.bower_path + '/angular-nvd3/dist/angular-nvd3.js',
     config.bower_path + '/angular-charts/dist/angular-charts.js',
     config.bower_path + '/select2/dist/js/select2.min.js',
-    config.bower_path + '/angularMultipleSelect/build/multiple-select.min.js'
+    config.bower_path + '/angularMultipleSelect/build/multiple-select.min.js',
+    config.bower_path + '/bootstrap-select/dist/js/bootstrap-select.min.js'
 ];
 
 // public/build/css

@@ -32,6 +32,7 @@
     "angular-nvd3": "^1.0.9",
     "awesome-bootstrap-checkbox": "^0.3.7",
     "bootstrap-multiselect": "^0.9.13",
-    "angularMultipleSelect": "angular-multiple-select#^1.1.2"
+    "angularMultipleSelect": "angular-multiple-select#^1.1.2",
+    "bootstrap-select": "^1.11.2"
   }
 }

@@ -19,7 +19,6 @@ angular.module('app.controllers')
                 click: function() {},
                 legend: {
                     display: true,
-                    //could be 'left, right'
                     position: 'right'
                 }
             };
@@ -72,7 +71,7 @@ angular.module('app.controllers')
                         totalLupercio = totalLupercio + result[i].TOTAL_VOTOS;
                     }
                 }
-                $scope.resultCampos = VotosZonaLupercio.query();
+                $scope.resultCampos = VotosZonaCampos.query();
                 $scope.resultCampos.$promise.then(function(result) {
                     let totalCampos;
                     var totalVotosCampos10 = 0;
@@ -95,7 +94,7 @@ angular.module('app.controllers')
                             totalCampos = totalCampos + result[i].TOTAL_VOTOS;
                         }
                     }
-                    $scope.resultLuciana = VotosZonaCampos.query();
+                    $scope.resultLuciana = VotosZonaLuciana.query();
                     $scope.resultLuciana.$promise.then(function(result) {
                         let totalLuciana;
                         var totalVotosLuciana10 = 0;
@@ -118,6 +117,7 @@ angular.module('app.controllers')
                                 totalLuciana = totalLuciana + result[i].TOTAL_VOTOS;
                             }
                         }
+                        console.log(totalVotosLupercioZona10 + ' ' + totalVotosCampos10 + ' ' + ' '  + totalVotosLuciana10);
                         $scope.data = [{
                             key: "Professor Lupércio",
                             y: totalLupercio

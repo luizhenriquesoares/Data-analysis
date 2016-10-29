@@ -1,7 +1,7 @@
 const express = require('express');
-const Router = express.Router();
 const ApiZonaController = require('../../controllers/ApiZonaController');
 const ApiSecaoController = require('../../controllers/ApiSecaoController');
+const Router = express.Router();
 
 /*
  * Primary Routes for Apis EndPoint
@@ -30,7 +30,6 @@ Router.get('/zona/luciana', ApiZonaController.getDataLuciana);
  * Route Api EndPoint
  * @method GET
  */
-
 Router.get('/zona/campos', ApiZonaController.getDataCampos);
 
 
