@@ -38,7 +38,9 @@ config.vendor_path_js = [
     config.bower_path + '/d3/d3.js',
     config.bower_path + '/nvd3/build/nv.d3.js',
     config.bower_path + '/angular-nvd3/dist/angular-nvd3.js',
-    config.bower_path + '/angular-charts/dist/angular-charts.js'
+    config.bower_path + '/angular-charts/dist/angular-charts.js',
+    config.bower_path + '/select2/dist/js/select2.min.js',
+    config.bower_path + '/angularMultipleSelect/build/multiple-select.min.js'
 ];
 
 // public/build/css
@@ -49,8 +51,6 @@ config.build_vendor_path_css = config.build_path_css + '/vendor';
 
 // public/build/vendor/css
 config.vendor_path_css = [
-    config.bower_path + '/bootstrap/dist/css/bootstrap.min.css',
-    config.bower_path + '/bootstrap/dist/css/bootstrap-theme.min.css'
 ];
 
 // public/build/views

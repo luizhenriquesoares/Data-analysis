@@ -1,0 +1,59 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Defina zona e secão eleitoral</h4>
+                    </div>
+                    <div class="content">
+                        <div class="form-group">
+                            <label for="zona">Zona Eleitoral</label>
+                            <select class="form-control" ng-model="zona">
+                            <option value="10">zona 10</option>
+                            <option value="100">zona 100</option>
+                            <option value="113">zona 113</option>
+                            <option value="117">zona 117</option>
+                          </select>
+                            <div class="form-group">
+                                <label for="secao">Secão Eleitoral</label>
+                                <input type="text" name="secao" ng-model="secao" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-3">
+                                    <button type="submit" class="btn btn-info btn-fill" ng-click="setZona(zona,secao)">Enviar</button>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="stats">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="header">
+            <h4 class="title">Total de votos - Zonas Eleitorais</h4>
+            <p class="category">Municipio de Olinda</p>
+        </div>
+        <div class="content">
+            <div data-ac-chart="'bar'" data-ac-data="dataBar" data-ac-config="config" class="chart">
+            </div>
+            <div class="footer">
+                <div class="legend">
+                </div>
+                <hr>
+                <div class="stats">
+                    <i class="fa fa-history"></i> Updated 3 minutes ago
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

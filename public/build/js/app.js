@@ -15,6 +15,11 @@ angular.module('app', ['app.controllers', 'app.services', 'app.filters', 'ui.rou
         .state('index', {
             url: '/',
             templateUrl: 'build/views/home.html',
-            controller: 'pierCtrl'
+            controller: 'HomeCtrl'
+        })
+        .state('search', {
+            url: '/search',
+            templateUrl: 'build/views/search.html',
+            controller: 'SearchCtrl'
         });
 }]);
