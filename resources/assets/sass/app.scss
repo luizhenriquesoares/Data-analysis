@@ -1,5 +1,7 @@
-@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "../bower_components/font-awesome/scss/font-awesome";
-@import "../bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss";
-@import "./pe-icon.stroke";
-@import "./bootstrap-dashboard";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
+
+/* css chart bar */
+.chart {
+ width: 565px;
+ height: 350px;
+}
