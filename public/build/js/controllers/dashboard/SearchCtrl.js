@@ -6,7 +6,7 @@ angular.module('app.controllers')
         $scope.config = {
             title: 'Qtd Votos:',
             tooltips: true,
-            labels: false,
+            labels: true,
             mouseover: function() {},
             mouseout: function() {},
             click: function() {},
@@ -25,17 +25,15 @@ angular.module('app.controllers')
                         zona: zona
                     })
                     $scope.secao.$promise.then(function(data) {
-                      //  $scope.secao = data;
-                      //  console.log($scope.secao);
-                      tmp = zona;
-                      $scope.getSecao = function(getSecao) {
-                          console.log(getSecao);
-                      }
+                        tmp = zona;
+                        $scope.getSecao = function(getSecao) {
+
+                        }
                     });
                 }
             }
         };
-      
+
         $scope.setZona = function(zona, secao) {
 
             $scope.search = VotosSecao.get({

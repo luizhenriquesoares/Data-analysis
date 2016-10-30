@@ -117,7 +117,7 @@ angular.module('app.controllers')
                                 totalLuciana = totalLuciana + result[i].TOTAL_VOTOS;
                             }
                         }
-                        console.log(totalVotosLupercioZona10 + ' ' + totalVotosCampos10 + ' ' + ' '  + totalVotosLuciana10);
+
                         $scope.data = [{
                             key: "Professor Lupércio",
                             y: totalLupercio

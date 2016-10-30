@@ -6,7 +6,7 @@ angular.module('app.controllers')
         $scope.config = {
             title: 'Qtd Votos:',
             tooltips: true,
-            labels: false,
+            labels: true,
             mouseover: function() {},
             mouseout: function() {},
             click: function() {},
