@@ -21,3 +21,11 @@ angular.module('app.services').factory('VotosZonaCampos', ['$resource', 'appConf
         }
     });
 }]);
+
+angular.module('app.services').factory('GetSecao', ['$resource', 'appConfig', function($resource, appConfig){
+    return $resource(appConfig.baseUrl + '/api/olinda/:zona/', {zona: '@zona'}, {
+        get: {
+          isArray: true
+        }
+    });
+}]);

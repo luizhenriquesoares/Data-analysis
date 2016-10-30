@@ -11,9 +11,9 @@ const Router = express.Router();
  * nas eleições do 1 turno de 2016
  */
 
- Router.get('/', function(req,res){
-   res.send('olá');
- });
+Router.get('/', function(req, res) {
+    res.send('olá');
+});
 /*
  * Route Api EndPoint
  * @method GET
@@ -35,5 +35,6 @@ Router.get('/zona/campos', ApiZonaController.getDataCampos);
 
 Router.get('/:zona/:secao', ApiSecaoController.searchData);
 
+Router.get('/:zona', ApiZonaController.getSecao);
 
 module.exports = Router;

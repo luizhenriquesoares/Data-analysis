@@ -83,7 +83,7 @@ gulp.task('copy-font', function() {
 // public/build/images
 gulp.task('copy-image', function() {
     gulp.src([
-            config.assets_path + '/images/**/*'
+            config.assets_path + '/img/**/*'
         ])
         .pipe(gulp.dest(config.build_path_image))
         .pipe(liveReload());

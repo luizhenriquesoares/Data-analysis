@@ -1,9 +1,11 @@
 const Api = require('../models/UrnaZona');
 
 /*
-* Retorna todos dados de Professor Lupércio
-* @return JSON DATA
-*/
+ * Retorna todos dados de Professor Lupércio
+ *
+ *
+ * @return JSON DATA
+ */
 exports.getDataLupercio = (req, res) => {
     var query = {
         NOME_MUNICIPIO: 'OLINDA',
@@ -18,9 +20,11 @@ exports.getDataLupercio = (req, res) => {
 };
 
 /*
-* Retorna todos dados de Luciana Santos
-* @return JSON DATA
-*/
+ * Retorna todos dados de Luciana Santos
+ *
+ *
+ * @return JSON DATA
+ */
 exports.getDataLuciana = (req, res) => {
     var query = {
         NOME_MUNICIPIO: 'OLINDA',
@@ -35,9 +39,11 @@ exports.getDataLuciana = (req, res) => {
 };
 
 /*
-* Retorna todos dados de Antônio Campos
-* @return JSON DATA
-*/
+ * Retorna todos dados de Antônio Campos
+ *
+ *
+ * @return JSON DATA
+ */
 exports.getDataCampos = (req, res) => {
     var query = {
         NOME_MUNICIPIO: 'OLINDA',
@@ -48,5 +54,20 @@ exports.getDataCampos = (req, res) => {
         if (err) throw err;
         console.log(err);
         res.json(data);
+    });
+};
+
+/*
+ * Retorna todos as Secões de determinada zona
+ *
+ *
+ * @return JSON DATA
+ */
+ // 'NUMERO_SECAO',({{NUMERO_ZONA: parseInt(req.params.zona),NOME_MUNICIPIO: 'OLINDA' })
+
+exports.getSecao = (req, res) => {
+    var promise = Api.distinct('NUMERO_SECAO', {NUMERO_ZONA: parseInt(req.params.zona), NOME_MUNICIPIO: 'OLINDA'});
+    promise.then(function(data){
+      res.json(data);
     });
 };

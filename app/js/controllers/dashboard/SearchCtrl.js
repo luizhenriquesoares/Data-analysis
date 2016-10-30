@@ -1,7 +1,7 @@
 'use stricts';
 
 angular.module('app.controllers')
-    .controller('SearchCtrl', ['$scope', 'VotosSecao', function($scope, VotosSecao) {
+    .controller('SearchCtrl', ['$scope', 'VotosSecao', 'GetSecao', function($scope, VotosSecao, GetSecao) {
         // options chart bar
         $scope.config = {
             title: 'Qtd Votos:',
@@ -12,8 +12,25 @@ angular.module('app.controllers')
             click: function() {},
             legend: {
                 display: true,
-                //could be 'left, right'
                 position: 'right'
+            }
+        };
+        var tmp;
+        $scope.setSecao = function(zona) {
+            if (tmp === '') {
+                tmp = zona;
+            } else {
+                if (zona !== undefined && tmp !== zona) {
+                    $scope.secao = GetSecao.get({
+                        zona: zona
+                    })
+                    $scope.secao.$promise.then(function(data) {
+                        tmp = zona;
+                        $scope.getSecao = function(getSecao) {
+
+                        }
+                    });
+                }
             }
         };
 

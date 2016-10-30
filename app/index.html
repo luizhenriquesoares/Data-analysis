@@ -12,12 +12,13 @@
     <link href="build/css/app.css" rel="stylesheet">
     <!--  Nvd3-charts CSS  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css"/>
+
     <!-- ANIMATE CSS -->
-    <link rel="stylesheet" href="build/css/vendor/animate.min.css"/>
+    <link rel="stylesheet" href="build/css/vendor/animate.min.css" />
     <!--  CORE CSS Thema  -->
-    <link rel="stylesheet" href="build/css/light-bootstrap-dashboard.css"/>
+    <link rel="stylesheet" href="build/css/light-bootstrap-dashboard.css" />
     <!--  Font Awesome CSS  -->
-    <link rel="stylesheet" href="build/css/font-awesome.css"/>
+    <link rel="stylesheet" href="build/css/font-awesome.css" />
     <!-- PE-ICON-7-Strok CSS -->
     <link rel="stylesheet" href="build/css/pe-icon-7.css">
     <!-- FONTS -->
@@ -27,13 +28,15 @@
 <body ng-app="app">
 
     <div class="wrapper">
-        <nav class="sidebar" data-color="purple" data-image="">
+        <nav class="sidebar" data-color="purple" data-image="/build/images/sidebar-5.jpg">
+
             <div class="sidebar-wrapper">
                 <div class="logo">
                     <a href="#" class="simple-text">
                       Oncase Business
                     </a>
                 </div>
+
                 <ul class="nav">
                     <li class="active">
                         <a ui-sref="index">
@@ -42,14 +45,20 @@
                         </a>
                     </li>
 
-                    <ul class="nav">
-                        <li class="active">
-                            <a ui-sref="search">
-                                <i class="pe-7s-graph2"></i>
-                                <p>Busca Avançada</p>
-                            </a>
-                        </li>
-                    </ul>
+                    <li>
+                        <a ui-sref="search">
+                            <i class="pe-7s-graph2"></i>
+                            <p>Busca Avançada</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a ui-sref="search">
+                            <i class="pe-7s-users"></i>
+                            <p>Usuário</p>
+                        </a>
+                    </li>
+
                 </ul>
             </div>
         </nav>
@@ -86,18 +95,12 @@
                         <!-- Menu Dropdown-->
                         <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="true" id="dropdownMenu1">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" id="dropdownMenu1">
                                       Olá, Luiz Henrique
                                       <b class="caret"></b>
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a href="#">Notification 1</a></li>
-                                    <li><a href="#">Notification 2</a></li>
-                                    <li><a href="#">Notification 3</a></li>
-                                    <li><a href="#">Notification 4</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">Another notification</a></li>
+                                    <li><a href="#">Logout</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -159,9 +162,11 @@
     <script src="build/js/services/SecaoService.js"></script>
 
     <!-- jQuery (necessary for Bootstraps JavaScript plugins -->
+    <!-- <script src="build/js/vendor/geral.js"></script> -->
     <script src="build/js/vendor/jquery.min.js"></script>
     <!--   Core JS Files   -->
     <script src="build/js/vendor/bootstrap.min.js"></script>
+
 
 </body>
 
