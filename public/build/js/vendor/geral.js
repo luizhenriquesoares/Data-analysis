@@ -1,7 +1,20 @@
-// select buscar motorista ajax
 
+$('#searchNotify').click(function() {
+  $.notify("Entre: Com uma zona e uma seção eleitoral para gerar o gráfico", {
+    animate: {
+  		enter: 'animated rollIn',
+  		exit: 'animated rollOut'
+  	},
 
-$('.selectpicker').selectpicker({
-  style: 'btn-default',
-  size: 4
+  });
+});
+
+$('#searchSubmit').click(function() {
+  $.notify("Gráfico gerado com sucesso", {
+    animate: {
+  		enter: 'animated rollIn',
+  		exit: 'animated rollOut'
+  	},
+
+  });
 });

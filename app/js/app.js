@@ -1,6 +1,6 @@
 'use stricts';
 
-angular.module('app.controllers', ['chart.js', 'nvd3', 'angularCharts']);
+angular.module('app.controllers', ['chart.js', 'nvd3', 'angularCharts','cgNotify']);
 angular.module('app.services', []);
 angular.module('app.filters', []);
 

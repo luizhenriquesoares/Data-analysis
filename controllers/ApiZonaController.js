@@ -63,8 +63,6 @@ exports.getDataCampos = (req, res) => {
  *
  * @return JSON DATA
  */
- // 'NUMERO_SECAO',({{NUMERO_ZONA: parseInt(req.params.zona),NOME_MUNICIPIO: 'OLINDA' })
-
 exports.getSecao = (req, res) => {
     var promise = Api.distinct('NUMERO_SECAO', {NUMERO_ZONA: parseInt(req.params.zona), NOME_MUNICIPIO: 'OLINDA'});
     promise.then(function(data){

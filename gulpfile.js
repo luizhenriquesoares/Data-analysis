@@ -38,7 +38,9 @@ config.vendor_path_js = [
     config.bower_path + '/nvd3/build/nv.d3.js',
     config.bower_path + '/angular-nvd3/dist/angular-nvd3.js',
     config.bower_path + '/angular-charts/dist/angular-charts.js',
-    config.bower_path + '/bootstrap-sass/assets/javascripts/bootstrap.min.js'
+    config.bower_path + '/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+    config.bower_path + '/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js',
+    config.bower_path + '/angular-notify/dist/angular-notify.min.js'
 
 ];
 
@@ -52,6 +54,7 @@ config.build_vendor_path_css = config.build_path_css + '/vendor';
 config.vendor_path_css = [
     config.bower_path + '/animate.css/animate.min.css',
     config.bower_path + '/nvd3/build/nv.d3.min.css',
+    config.bower_path + '/angular-notify/dist/angular-notify.min.css'
     // config.bower_path + '/pixeden-stroke-7-icon/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css'
 
 ];

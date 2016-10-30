@@ -1,7 +1,8 @@
 'use stricts';
 
 angular.module('app.controllers')
-    .controller('SearchCtrl', ['$scope', 'VotosSecao', 'GetSecao', function($scope, VotosSecao, GetSecao) {
+    .controller('SearchCtrl', ['$scope', 'VotosSecao', 'GetSecao','notify',
+     function($scope, VotosSecao, GetSecao, notify) {
         // options chart bar
         $scope.config = {
             title: 'Qtd Votos:',
@@ -33,7 +34,6 @@ angular.module('app.controllers')
                 }
             }
         };
-
         $scope.setZona = function(zona, secao) {
 
             $scope.search = VotosSecao.get({
@@ -72,7 +72,11 @@ angular.module('app.controllers')
                         y: [qtd_votos_1, qtd_votos_2, qtd_votos_3, qtd_votos_4, qtd_votos_5, qtd_votos_6, qtd_votos_7, qtd_votos_8, qtd_votos_9],
                     }]
                 };
+                notify('Resultado gerado com sucesso!');
             });
         };
+
+
+
 
     }]);

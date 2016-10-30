@@ -4,23 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="viewport" content="width=device-width" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Analisys Data</title>
 
     <!-- CORE CSS bootstrap 3 -->
     <link href="build/css/app.css" rel="stylesheet">
     <!--  Nvd3-charts CSS  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css" />
 
     <!-- ANIMATE CSS -->
     <link rel="stylesheet" href="build/css/vendor/animate.min.css" />
     <!--  CORE CSS Thema  -->
-    <link rel="stylesheet" href="build/css/light-bootstrap-dashboard.css" />
+    <link rel="stylesheet" href="build/css/bootstrap-dashboard.css" />
     <!--  Font Awesome CSS  -->
     <link rel="stylesheet" href="build/css/font-awesome.css" />
     <!-- PE-ICON-7-Strok CSS -->
     <link rel="stylesheet" href="build/css/pe-icon-7.css">
+    <!-- Angular notify CSS -->
+    <link rel="stylesheet" href="build/css/vendor/angular-notify.min.css">
     <!-- FONTS -->
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css">
 </head>
@@ -45,7 +48,7 @@
                         </a>
                     </li>
 
-                    <li>
+                    <li id="searchNotify">
                         <a ui-sref="search">
                             <i class="pe-7s-graph2"></i>
                             <p>Busca Avançada</p>
@@ -141,6 +144,7 @@
     <script src="build/js/vendor/angular-animate.min.js"></script>
     <script src="build/js/vendor/angular-messages.min.js"></script>
     <script src="build/js/vendor/angular-cookies.min.js"></script>
+    <script src="build/js/vendor/angular-notify.min.js"></script>
 
     <!-- LBIS CHARTS!-->
     <script src="build/js/vendor/Chart.min.js"></script>
@@ -149,6 +153,7 @@
     <script src="build/js/vendor/angular-chart.min.js"></script>7
     <script src="build/js/vendor/nv.d3.js"></script>
     <script src="build/js/vendor/angular-nvd3.js"></script>
+
 
     <!-- APP!-->
     <script src="build/js/app.js"></script>
@@ -166,7 +171,22 @@
     <script src="build/js/vendor/jquery.min.js"></script>
     <!--   Core JS Files   -->
     <script src="build/js/vendor/bootstrap.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="build/js/vendor/bootstrap-notify.min.js"></script>
+    <script src="build/js/vendor/geral.js"></script>
 
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.notify({
+                // icon: 'fa fa-home',
+                message: "Bem-vindo <b>Analytic DashBoard - Oncase</b> - um projeto em desenvolvimento pela Oncase."
+            }, {
+                type: 'info',
+                timer: 4000
+            });
+        });
+    </script>
 
 </body>
 
