@@ -27,7 +27,7 @@ angular.module('app.controllers')
             $scope.options = {
                 chart: {
                     type: 'pieChart',
-                    height: 380,
+                    height: 500,
                     x: function(d) {
                         return d.key;
                     },
@@ -37,13 +37,13 @@ angular.module('app.controllers')
                     showLabels: true,
                     duration: 500,
                     labelThreshold: 0.01,
-                    labelSunbeamLayout: false,
+                    labelSunbeamLayout: true,
                     legend: {
                         margin: {
-                            top: 5,
-                            right: 35,
-                            bottom: 5,
-                            left: 0
+                          top: 5,
+                          right: 35,
+                          bottom: 5,
+                          left: 0
                         }
                     }
                 }

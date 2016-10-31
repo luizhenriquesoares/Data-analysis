@@ -10,7 +10,7 @@ $('#searchNotify').click(function() {
 });
 
 $('#searchIntervalNotify').click(function() {
-  $.notify("Entre: Com uma zona e uma seção eleitoral para gerar o gráfico", {
+  $.notify("Entre: Com um intervalo de seções para gerar o gráfico", {
     animate: {
   		enter: 'animated rollIn',
   		exit: 'animated rollOut'
