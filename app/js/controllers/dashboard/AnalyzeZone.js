@@ -1,20 +1,19 @@
 'use stricts';
 
 angular.module('app.controllers')
-    .controller('HomeCtrl', ['$scope', 'VotosZonaLupercio', 'VotosZonaLuciana',
-        'VotosZonaCampos', 'VotosZonaIzabel', 'VotosZonaTeresa' ,
-        function($scope, VotosZonaLupercio, VotosZonaLuciana, VotosZonaCampos, VotosZonaIzabel, VotosZonaTeresa ) {
-            $scope.data = [];
+    .controller('AnalyzeZoneCtrl', ['$scope', 'VotosZonaLupercio', 'VotosZonaLuciana',
+        'VotosZonaCampos', 'VotosZonaIzabel', 'VotosZonaTeresa',
+        function($scope, VotosZonaLupercio, VotosZonaLuciana, VotosZonaCampos, VotosZonaIzabel, VotosZonaTeresa) {
             const zona10 = '10';
             const zona100 = '100';
             const zona113 = '113';
             const zona117 = '117';
 
-            // options chart bar
+            // options chart Line
             $scope.config = {
                 title: 'Qtd Votos:',
                 tooltips: true,
-                labels: true,
+                labels: false,
                 mouseover: function() {},
                 mouseout: function() {},
                 click: function() {},
@@ -23,34 +22,9 @@ angular.module('app.controllers')
                     position: 'right'
                 }
             };
-            // options charts pie
-            $scope.options = {
-                chart: {
-                    type: 'pieChart',
-                    height: 380,
-                    x: function(d) {
-                        return d.key;
-                    },
-                    y: function(d) {
-                        return d.y;
-                    },
-                    showLabels: false,
-                    duration: 500,
-                    labelThreshold: 0.01,
-                    labelSunbeamLayout: true,
-                    legend: {
-                        margin: {
-                          top: 5,
-                          right: 35,
-                          bottom: 5,
-                          left: 0
-                        }
-                    }
-                }
-            };
 
-            $scope.resultLupercio = VotosZonaLupercio.query();
-            $scope.resultLupercio.$promise.then(function(result) {
+            $scope.resultLupercio1 = VotosZonaLupercio.query();
+            $scope.resultLupercio1.$promise.then(function(result) {
                 var totalLupercio;
                 var totalVotosLupercioZona10 = 0;
                 var totalVotosLupercioZona100 = 0;
@@ -72,8 +46,8 @@ angular.module('app.controllers')
                         totalLupercio = totalLupercio + result[i].TOTAL_VOTOS;
                     }
                 }
-                $scope.resultCampos = VotosZonaCampos.query();
-                $scope.resultCampos.$promise.then(function(result) {
+                $scope.resultCampos1 = VotosZonaCampos.query();
+                $scope.resultCampos1.$promise.then(function(result) {
                     let totalCampos;
                     var totalVotosCampos10 = 0;
                     var totalVotosCampos100 = 0;
@@ -95,8 +69,8 @@ angular.module('app.controllers')
                             totalCampos = totalCampos + result[i].TOTAL_VOTOS;
                         }
                     }
-                    $scope.resultLuciana = VotosZonaLuciana.query();
-                    $scope.resultLuciana.$promise.then(function(result) {
+                    $scope.resultLuciana1 = VotosZonaLuciana.query();
+                    $scope.resultLuciana1.$promise.then(function(result) {
                         let totalLuciana;
                         var totalVotosLuciana10 = 0;
                         var totalVotosLuciana100 = 0;
@@ -118,8 +92,8 @@ angular.module('app.controllers')
                                 totalLuciana = totalLuciana + result[i].TOTAL_VOTOS;
                             }
                         }
-                        $scope.resultIzabel = VotosZonaIzabel.query();
-                        $scope.resultIzabel.$promise.then(function(result) {
+                        $scope.resultIzabel1 = VotosZonaIzabel.query();
+                        $scope.resultIzabel1.$promise.then(function(result) {
                             let totalIzabel;
                             var totalVotosIzabel10 = 0;
                             var totalVotosIzabel100 = 0;
@@ -142,8 +116,8 @@ angular.module('app.controllers')
                                 }
                             }
 
-                            $scope.resultTeresa = VotosZonaTeresa.query();
-                            $scope.resultTeresa.$promise.then(function(result) {
+                            $scope.resultTeresa1 = VotosZonaTeresa.query();
+                            $scope.resultTeresa1.$promise.then(function(result) {
                                 let totalTeresa;
                                 var totalVotosTeresa10 = 0;
                                 var totalVotosTeresa100 = 0;
@@ -165,27 +139,12 @@ angular.module('app.controllers')
                                         totalTeresa = totalTeresa + result[i].TOTAL_VOTOS;
                                     }
                                 }
-                                $scope.data = [{
-                                    key: "Professor Lupércio",
-                                    y: totalLupercio
-                                }, {
-                                    key: "Antônio Campos",
-                                    y: totalCampos
-                                }, {
-                                    key: "Luciana Santos",
-                                    y: totalLuciana
-                                }, {
-                                    key: "Izabel Urquiza",
-                                    y: totalIzabel
-                                }, {
-                                    key: "Teresa Leitão",
-                                    y: totalTeresa
-                                }];
-                                $scope.dataBar = {
-                                    series: ['Prof. Lupércio"', 'Antônio Campos', 'Luciana Santos', 'Izabel Urquiza', 'Teresa Leitão'],
+                                $scope.dataLine = {
+                                    series: ['', '', '', '', ''],
                                     data: [{
                                         x: "Zona 10",
                                         y: [totalVotosLupercioZona10, totalVotosCampos10, totalVotosLuciana10, totalVotosIzabel10, totalVotosTeresa10],
+                                        tooltip: "this is tooltip"
                                     }, {
                                         x: "Zona 100",
                                         y: [totalVotosLupercioZona100, totalVotosCampos100, totalVotosLuciana100, totalVotosIzabel100, totalVotosTeresa100]

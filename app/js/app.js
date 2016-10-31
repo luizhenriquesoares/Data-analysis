@@ -26,5 +26,10 @@ angular.module('app', ['app.controllers', 'app.services', 'app.filters', 'ui.rou
             url: '/searchInterval',
             templateUrl: 'build/views/searchInterval.html',
             controller: 'SearchIntervalCtrl'
+        })
+        .state('analyzeZone', {
+            url: '/analyzeZone',
+            templateUrl: 'build/views/analyzeZone.html',
+            controller: 'AnalyzeZoneCtrl'
         });
 }]);
