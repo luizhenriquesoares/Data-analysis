@@ -1,6 +1,6 @@
  ## Análise de Dados - Eleições 2016 - Olinda - v1.0
 
-[![Build Status](https://nodejs.org/en/)
+
 
 # Documentação Oficial
 
