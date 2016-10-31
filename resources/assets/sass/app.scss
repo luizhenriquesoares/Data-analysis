@@ -1,7 +1,18 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
-
 /* css chart bar */
 .chart {
- width: 565px;
- height: 350px;
+    width: 565px;
+    height: 350px;
+}
+/*css login */
+.remove-float {
+    float: none;
+}
+
+.big-top-space {
+    margin-top: 100px;
+}
+
+.top-space {
+    margin-top: 1.5em;
 }

@@ -57,6 +57,33 @@ exports.getDataCampos = (req, res) => {
     });
 };
 
+exports.getIsabel = (req, res) => {
+    var query = {
+        NOME_MUNICIPIO: 'OLINDA',
+        DESCRICAO_CARGO: 'PREFEITO',
+        NOME_URNA_CANDIDATO: 'IZABEL URQUIZA'
+    };
+    Api.find(query, function(err, data) {
+        if (err) throw err;
+        console.log(err);
+        res.json(data);
+    });
+};
+
+
+exports.getTeresa = (req, res) => {
+    var query = {
+        NOME_MUNICIPIO: 'OLINDA',
+        DESCRICAO_CARGO: 'PREFEITO',
+        NOME_URNA_CANDIDATO: 'TERESA LEITÃO'
+    };
+    Api.find(query, function(err, data) {
+        if (err) throw err;
+        console.log(err);
+        res.json(data);
+    });
+};
+
 /*
  * Retorna todos as Secões de determinada zona
  *

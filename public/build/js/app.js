@@ -21,5 +21,10 @@ angular.module('app', ['app.controllers', 'app.services', 'app.filters', 'ui.rou
             url: '/search',
             templateUrl: 'build/views/search.html',
             controller: 'SearchCtrl'
+        })
+        .state('searchInterval', {
+            url: '/searchInterval',
+            templateUrl: 'build/views/searchInterval.html',
+            controller: 'SearchIntervalCtrl'
         });
 }]);

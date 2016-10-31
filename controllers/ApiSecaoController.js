@@ -13,3 +13,12 @@ exports.searchData = (req, res) => {
     });
 
 };
+
+exports.searchIntervalSession = (req, res) => {
+    var promise = Api.find({NUMERO_SECAO: {$gte: parseInt(req.params.secaoInicial),
+       $lte: parseInt(req.params.secaoFinal)}, NUMERO_ZONA: parseInt(req.params.zona)});
+    promise.then(function(data) {
+        res.json(data);
+    });
+
+};

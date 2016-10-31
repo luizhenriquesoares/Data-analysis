@@ -31,7 +31,7 @@
 <body ng-app="app">
 
     <div class="wrapper">
-        <nav class="sidebar" data-color="purple" data-image="/build/images/sidebar-5.jpg">
+        <nav class="sidebar" data-color="purple" data-image="">
 
             <div class="sidebar-wrapper">
                 <div class="logo">
@@ -55,10 +55,10 @@
                         </a>
                     </li>
 
-                    <li>
-                        <a ui-sref="search">
-                            <i class="pe-7s-users"></i>
-                            <p>Usuário</p>
+                    <li id="searchIntervalNotify">
+                        <a ui-sref="searchInterval">
+                            <i class="pe-7s-graph2"></i>
+                            <p>Buscar por Intervado</p>
                         </a>
                     </li>
 
@@ -154,13 +154,13 @@
     <script src="build/js/vendor/nv.d3.js"></script>
     <script src="build/js/vendor/angular-nvd3.js"></script>
 
-
     <!-- APP!-->
     <script src="build/js/app.js"></script>
 
     <!-- CONTROLLERS!-->
     <script src="build/js/controllers/dashboard/HomeCtrl.js"></script>
     <script src="build/js/controllers/dashboard/SearchCtrl.js"></script>
+    <script src="build/js/controllers/dashboard/SearchInterval.js"></script>
 
     <!-- SERVICES!-->
     <script src="build/js/services/ZonaService.js"></script>

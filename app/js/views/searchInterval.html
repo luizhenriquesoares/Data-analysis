@@ -18,14 +18,21 @@
                            </select>
 
                             <div class="form-group">
-                                <label for="secao">Secão Eleitoral</label>
-                                 <select class="form-control" ng-model="myselect" ng-options="o as o for o in secao">
+                                <label for="secao">Secão incial</label>
+                                <select class="form-control" ng-model="secaoInicial" ng-options="o as o for o in secao">
+                                   <option disabled selected value> Selecione uma opção</option>
+                                 </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="secao">Secão Final</label>
+                                <select class="form-control" ng-model="secaoFinal" ng-options="x as x for x in secao">
                                    <option disabled selected value> Selecione uma opção</option>
                                  </select>
                             </div>
                             <div class="form-group">
                                 <div>
-                                    <button  type="submit" class="btn btn-info btn-fill" ng-click="setZona(zona,myselect)">Enviar</button>
+                                    <button type="submit" class="btn btn-info btn-fill" ng-click="setZona(secaoInicial,secaoFinal,zona)">Enviar</button>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
