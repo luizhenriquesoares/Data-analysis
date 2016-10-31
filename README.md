@@ -10,7 +10,7 @@ https://angularjs.org/
 https://www.mongodb.com/
 
 
-## Instalação e Deploy
+# Instalação e Deploy
 1. Necessário [Git](https://git-scm.com/downloads), [Node- v6.7.0](https://nodejs.org/en/) e [MongoDB- v3.2.0](https://www.mongodb.com/) instalados;
 2. Execute “ git clone https://github.com/luizhenriquesoares/data-analysis.git”
 3. Execute “ npm install” (Este comando pode levar vários minutos)
