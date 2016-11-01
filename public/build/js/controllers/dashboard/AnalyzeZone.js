@@ -147,7 +147,7 @@ angular.module('app.controllers')
                                         plotLines: [{
                                             value: 0,
                                             width: 1,
-                                            color: ''
+                                            color: 'red'
                                         }]
                                     },
                                     tooltip: {
