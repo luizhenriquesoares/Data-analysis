@@ -172,7 +172,7 @@ angular.module('app.controllers')
                                         name: 'Izabel Urquiza',
                                         data: [totalVotosIzabel10, totalVotosIzabel100, totalVotosIzabel113, totalVotosIzabel117]
                                     }, {
-                                        name: 'Izabel Urquiza',
+                                        name: 'Teresa Leitão',
                                         data: [totalVotosTeresa10, totalVotosTeresa100, totalVotosTeresa113, totalVotosTeresa117]
 
                                     }]
