@@ -9,19 +9,7 @@ angular.module('app.controllers')
             const zona113 = '113';
             const zona117 = '117';
 
-            // options chart Line
-            $scope.config = {
-                title: 'Qtd Votos:',
-                tooltips: true,
-                labels: false,
-                mouseover: function() {},
-                mouseout: function() {},
-                click: function() {},
-                legend: {
-                    display: true,
-                    position: 'right'
-                }
-            };
+
 
             $scope.resultLupercio1 = VotosZonaLupercio.query();
             $scope.resultLupercio1.$promise.then(function(result) {
@@ -139,27 +127,61 @@ angular.module('app.controllers')
                                         totalTeresa = totalTeresa + result[i].TOTAL_VOTOS;
                                     }
                                 }
-                                $scope.dataLine = {
-                                    series: ['', '', '', '', ''],
-                                    data: [{
-                                        x: "Zona 10",
-                                        y: [totalVotosLupercioZona10, totalVotosCampos10, totalVotosLuciana10, totalVotosIzabel10, totalVotosTeresa10],
-                                        tooltip: "this is tooltip"
+
+                                Highcharts.chart('container', {
+                                    title: {
+                                        text: '',
+                                        x: -20 //center
+                                    },
+                                    subtitle: {
+                                        text: '',
+                                        x: -20
+                                    },
+                                    xAxis: {
+                                        categories: ['Zona 10', 'Zona 100', 'Zona 113', 'Zona 117']
+                                    },
+                                    yAxis: {
+                                        title: {
+                                            text: 'QTD Votos:'
+                                        },
+                                        plotLines: [{
+                                            value: 0,
+                                            width: 1,
+                                            color: 'red'
+                                        }]
+                                    },
+                                    tooltip: {
+                                        valueSuffix: ''
+                                    },
+                                    legend: {
+                                        layout: 'vertical',
+                                        align: 'right',
+                                        verticalAlign: 'middle',
+                                        borderWidth: 0
+                                    },
+                                    series: [{
+                                        name: 'Professor Lupércio',
+                                        data: [totalVotosLupercioZona10, totalVotosLupercioZona100, totalVotosLupercioZona113, totalVotosLupercioZona117]
                                     }, {
-                                        x: "Zona 100",
-                                        y: [totalVotosLupercioZona100, totalVotosCampos100, totalVotosLuciana100, totalVotosIzabel100, totalVotosTeresa100]
+                                        name: 'Antônio Campos',
+                                        data: [totalVotosCampos10, totalVotosCampos100, totalVotosCampos113, totalVotosCampos117]
                                     }, {
-                                        x: "Zona 113",
-                                        y: [totalVotosLupercioZona113, totalVotosCampos113, totalVotosLuciana113, totalVotosIzabel113, totalVotosTeresa113]
+                                        name: 'Luciana Santos',
+                                        data: [totalVotosLuciana10, totalVotosLuciana100, totalVotosLuciana113, totalVotosLuciana117]
                                     }, {
-                                        x: "Zona 117",
-                                        y: [totalVotosLupercioZona117, totalVotosCampos117, totalVotosLuciana117, totalVotosIzabel117, totalVotosTeresa117]
+                                        name: 'Izabel Urquiza',
+                                        data: [totalVotosIzabel10, totalVotosIzabel100, totalVotosIzabel113, totalVotosIzabel117]
+                                    }, {
+                                        name: 'Izabel Urquiza',
+                                        data: [totalVotosTeresa10, totalVotosTeresa100, totalVotosTeresa113, totalVotosTeresa117]
+
                                     }]
-                                };
+                                });
                             });
                         });
                     });
                 });
             });
+
         }
     ]);

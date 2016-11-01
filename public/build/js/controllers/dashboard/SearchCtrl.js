@@ -75,8 +75,4 @@ angular.module('app.controllers')
                 notify('Resultado gerado com sucesso!');
             });
         };
-
-
-
-
     }]);
