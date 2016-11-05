@@ -7,7 +7,7 @@ const Api = require('../models/UrnaZona');
  * @return JSON DATA
  */
 exports.getDataLupercio = (req, res) => {
-    var query = {
+    let query = {
         NOME_MUNICIPIO: 'OLINDA',
         DESCRICAO_CARGO: 'PREFEITO',
         NOME_URNA_CANDIDATO: 'PROFESSOR LUPERCIO'
@@ -26,7 +26,7 @@ exports.getDataLupercio = (req, res) => {
  * @return JSON DATA
  */
 exports.getDataLuciana = (req, res) => {
-    var query = {
+    let query = {
         NOME_MUNICIPIO: 'OLINDA',
         DESCRICAO_CARGO: 'PREFEITO',
         NOME_URNA_CANDIDATO: 'LUCIANA SANTOS'
@@ -45,7 +45,7 @@ exports.getDataLuciana = (req, res) => {
  * @return JSON DATA
  */
 exports.getDataCampos = (req, res) => {
-    var query = {
+    let query = {
         NOME_MUNICIPIO: 'OLINDA',
         DESCRICAO_CARGO: 'PREFEITO',
         NOME_URNA_CANDIDATO: 'ANTÔNIO CAMPOS'
@@ -58,7 +58,7 @@ exports.getDataCampos = (req, res) => {
 };
 
 exports.getIsabel = (req, res) => {
-    var query = {
+    let query = {
         NOME_MUNICIPIO: 'OLINDA',
         DESCRICAO_CARGO: 'PREFEITO',
         NOME_URNA_CANDIDATO: 'IZABEL URQUIZA'
@@ -72,7 +72,7 @@ exports.getIsabel = (req, res) => {
 
 
 exports.getTeresa = (req, res) => {
-    var query = {
+    let query = {
         NOME_MUNICIPIO: 'OLINDA',
         DESCRICAO_CARGO: 'PREFEITO',
         NOME_URNA_CANDIDATO: 'TERESA LEITÃO'
@@ -91,8 +91,11 @@ exports.getTeresa = (req, res) => {
  * @return JSON DATA
  */
 exports.getSecao = (req, res) => {
-    var promise = Api.distinct('NUMERO_SECAO', {NUMERO_ZONA: parseInt(req.params.zona), NOME_MUNICIPIO: 'OLINDA'});
-    promise.then(function(data){
-      res.json(data);
+    let promise = Api.distinct('NUMERO_SECAO', {
+        NUMERO_ZONA: parseInt(req.params.zona),
+        NOME_MUNICIPIO: 'OLINDA'
+    });
+    promise.then(function(data) {
+        res.json(data);
     });
 };
