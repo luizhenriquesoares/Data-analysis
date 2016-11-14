@@ -24,12 +24,13 @@ angular.module('app.controllers')
                 if (zona !== undefined && tmp !== zona) {
                     $scope.secao = GetSecao.get({
                         zona: zona
-                    })
+                    });
                     $scope.secao.$promise.then(function(data) {
                         tmp = zona;
+                        console.log(data);
                         $scope.getSecao = function(getSecao) {
-
-                        }
+                          console.log(getSecao);
+                        };
                     });
                 }
             }
@@ -41,6 +42,7 @@ angular.module('app.controllers')
                 secao: secao
             });
             $scope.search.$promise.then(function(result) {
+              //  console.log(result);
                 for (var i = 0; i < result.length; i++) {
 
                     if (result[i].NUMERO_VOTAVEL == 77) {

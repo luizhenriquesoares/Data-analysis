@@ -83,19 +83,3 @@ exports.getTeresa = (req, res) => {
         res.json(data);
     });
 };
-
-/*
- * Retorna todos as Secões de determinada zona
- *
- *
- * @return JSON DATA
- */
-exports.getSecao = (req, res) => {
-    let promise = Api.distinct('NUMERO_SECAO', {
-        NUMERO_ZONA: parseInt(req.params.zona),
-        NOME_MUNICIPIO: 'OLINDA'
-    });
-    promise.then(function(data) {
-        res.json(data);
-    });
-};

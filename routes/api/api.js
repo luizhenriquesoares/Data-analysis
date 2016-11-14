@@ -31,7 +31,7 @@ Router.get('/zona/teresa', ApiZonaController.getTeresa);
 
 Router.get('/:zona/:secao', ApiSecaoController.searchData);
 
-Router.get('/:zona', ApiZonaController.getSecao);
+Router.get('/:zona', ApiSecaoController.getSecao);
 
 /*FILTRO BUSCAR SECAO POR INTERVALO*/
 
